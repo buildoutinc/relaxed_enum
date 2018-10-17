@@ -1,4 +1,4 @@
-# RelaxedEnum
+# RelaxedEnum [![CircleCI](https://circleci.com/gh/buildoutinc/relaxed_enum.svg?style=svg)](https://circleci.com/gh/buildoutinc/relaxed_enum)
 
 Relax rails enum setter.  Allows setting an enum by supplying an integer, string or symbol.
 

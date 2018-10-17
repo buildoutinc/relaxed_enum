@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe RelaxedEnum do
   class ActiveRecordDummy
     def status
@@ -27,25 +29,25 @@ RSpec.describe RelaxedEnum do
 
   subject { EnumDummy.new }
 
-  describe ".relax_enum" do
-    it "it allows setting an enum via an integer" do
+  describe '.relax_enum' do
+    it 'it allows setting an enum via an integer' do
       subject.status = 1
-      expect(subject.status).to eq("bar")
+      expect(subject.status).to eq('bar')
     end
 
-    it "it allows setting an enum via a string" do
-      subject.status = "1"
-      expect(subject.status).to eq("bar")
+    it 'it allows setting an enum via a string' do
+      subject.status = '1'
+      expect(subject.status).to eq('bar')
     end
 
-    it "it allows setting an enum via a string representing a key" do
-      subject.status = "bar"
-      expect(subject.status).to eq("bar")
+    it 'it allows setting an enum via a string representing a key' do
+      subject.status = 'bar'
+      expect(subject.status).to eq('bar')
     end
 
-    it "it sets an error when the input is invalid" do
-      subject.status = "baz"
-      expect(subject.errors[:status]).to eq(["is not valid"])
+    it 'it sets an error when the input is invalid' do
+      subject.status = 'baz'
+      expect(subject.errors[:status]).to eq(['is not valid'])
     end
   end
 end
